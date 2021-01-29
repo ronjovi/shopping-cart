@@ -1,0 +1,117 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #005270;
+}
+
+#gallery-container {
+  margin: 0 2.25em;
+  background-color: #005270;
+  box-sizing: border-box;
+  padding: 35px 0;
+  margin: auto;
+}
+
+#title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+  color: #80efe6;
+}
+
+.subtitle {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  margin: 0 0 15px;
+  text-align: center;
+  color: #80efe6;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.col {
+  position: relative;
+  width: 125px;
+  height: 165px;
+  margin: 25px 1em;
+  border-radius: 10px;
+  overflow: hidden;
+  border: solid 4px #005270;
+  transition: all ease-in-out 300ms;
+}
+
+.col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.col:hover {
+  cursor: pointer;
+  border: solid 4px #80efe6;
+}
+
+#active-image-container .overlay {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  font-family: "Poppins", sans-serif;
+  padding: 1em;
+  box-sizing: border-box;
+  transition: all ease-in-out 300ms;
+}
+
+#active-image-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h1 {
+  text-align: center;
+  color: #80efe6;
+  margin: 0;
+}
+
+.overlay p {
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  margin-top: 100px;
+  color: #fff;
+  padding: 0 1em;
+}
+
+#active-image-container {
+  position: relative;
+  width: 320px;
+  height: 420px;
+  margin: 0px 1em;
+  border-radius: 10px;
+  overflow: hidden;
+  border: solid 4px #005270;
+  transition: all ease-in-out 300ms;
+  background-image: url(../assets/snoopy.jpg);
+  background-size: cover;
+  cursor: pointer;
+}
+
+#active-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.active {
+  border: solid 4px #80efe6;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <title>My Favourite Cats | Roberto Sanchez</title>
+    <!-- Import for Poppins font style-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div id="gallery-container">
+        <h1 id="title">Famous Cats</h1>
+        <p class="subtitle">Click on an image to learn more!</p>
+
+        <div class="row">
+            <div class="col active" id="bento" onclick="swapImage('bento')">
+                <img src="assets/bento.jpg" alt="Thumbnail of Bento the keyboard cat">
+            </div>
+            <div class="col" id="tardar-sauce" onclick="swapImage('tardar-sauce')">
+                <img src="assets/tardar-sauce.jpg" alt="Thumbnail of Tardar Sauce the grumpy cat">
+            </div>
+            <div class="col" id="honey-bee" onclick="swapImage('honey-bee')">
+                <img src="assets/honey-bee.jpg" alt="Thumbnail of Honey Bee the blind hiking cat">
+            </div>
+            <div class="col" id="venus" onclick="swapImage('venus')">
+                <img src="assets/venus.jpg" alt="Thumbnail of Venus the two-faced kitten">
+            </div>
+            <div class="col" id="garfi" onclick="swapImage('garfi')">
+                <img src="assets/garfi.jpg" alt="Thumbnail of Garfi the angry cat">
+            </div>
+            <div class="col" id="snoopy" onclick="swapImage('snoopy')">
+                <img src="assets/snoopy.jpg" alt="Thumbnail of Snoopybabe the cutest cat ever">
+            </div>
+        </div>
+
+
+        <p class="subtitle">Hover to learn more!</p>
+        <div class="row">
+            <div id="active-image-container">
+                <img id="active-image" src="assets/bento.jpg" alt="Thumbnail of Bento the keyboard cat">
+                <div class="overlay">
+                    <h1 id="active-image-name">Bento</h1>
+                    <p id="active-image-desc">Bento, the Keyboard Cat, rose to fame due to his iconic keyboard skills. Bento died at the young age of 9.</p>
+                  </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="js/gallery.js"></script>
+</body>
+
+</html>
