@@ -5,52 +5,92 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-    <title>My Favourite Cats | Roberto Sanchez</title>
+    <title>Shopping Cart | Roberto Sanchez</title>
     <!-- Import for Poppins font style-->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <div id="gallery-container">
-        <h1 id="title">Famous Cats</h1>
-        <p class="subtitle">Click on an image to learn more!</p>
-
-        <div class="row">
-            <div class="col active" id="bento" onclick="swapImage('bento')">
-                <img src="assets/bento.jpg" alt="Thumbnail of Bento the keyboard cat">
-            </div>
-            <div class="col" id="tardar-sauce" onclick="swapImage('tardar-sauce')">
-                <img src="assets/tardar-sauce.jpg" alt="Thumbnail of Tardar Sauce the grumpy cat">
-            </div>
-            <div class="col" id="honey-bee" onclick="swapImage('honey-bee')">
-                <img src="assets/honey-bee.jpg" alt="Thumbnail of Honey Bee the blind hiking cat">
-            </div>
-            <div class="col" id="venus" onclick="swapImage('venus')">
-                <img src="assets/venus.jpg" alt="Thumbnail of Venus the two-faced kitten">
-            </div>
-            <div class="col" id="garfi" onclick="swapImage('garfi')">
-                <img src="assets/garfi.jpg" alt="Thumbnail of Garfi the angry cat">
-            </div>
-            <div class="col" id="snoopy" onclick="swapImage('snoopy')">
-                <img src="assets/snoopy.jpg" alt="Thumbnail of Snoopybabe the cutest cat ever">
+    <div>
+        <div id="hero">
+            <div id="title-container">
+                <h1>Socks R Us</h1>
             </div>
         </div>
 
-
-        <p class="subtitle">Hover to learn more!</p>
-        <div class="row">
-            <div id="active-image-container">
-                <img id="active-image" src="assets/bento.jpg" alt="Thumbnail of Bento the keyboard cat">
-                <div class="overlay">
-                    <h1 id="active-image-name">Bento</h1>
-                    <p id="active-image-desc">Bento, the Keyboard Cat, rose to fame due to his iconic keyboard skills. Bento died at the young age of 9.</p>
-                  </div>
+        <div id="content">
+            <div id="items">
+                <div class="sock-item" onclick="addToCart('fett')">
+                    <div class="img-container">
+                        <img src="assets/fett.jpg" alt="Boba Fett socks">
+                    </div>
+                    <p>Boba Fett</p>
+                    <p class="price">$10</p>
+                </div>
+                <div class="sock-item" onclick="addToCart('spongebob')">
+                    <div class="img-container">
+                        <img src="assets/spongebob.jpg" alt="Spongebob socks">
+                    </div>
+                    <p>Spongebob</p>
+                    <p class="price">$8</p>
+                </div>
+                <div class="sock-item" onclick="addToCart('grogu')">
+                    <div class="img-container">
+                        <img src="assets/grogu.jpg" alt="Grogu socks">
+                    </div>
+                    <p>Grogu</p>
+                    <p class="price">$12</p>
+                </div>
+                <div class="sock-item" onclick="addToCart('imposter')">
+                    <div class="img-container">
+                        <img src="assets/imposter.jpg" alt="Imposter socks">
+                    </div>
+                    <p>Imposter</p>
+                    <p class="price">$9</p>
+                </div>
+                <div class="sock-item" onclick="addToCart('spiderman')">
+                    <div class="img-container">
+                        <img src="assets/spiderman.jpg" alt="Spiderman socks">
+                    </div>
+                    <p>Spiderman</p>
+                    <p class="price">$6</p>
+                </div>
+                <div class="sock-item" onclick="addToCart('undertaker')">
+                    <div class="img-container">
+                        <img src="assets/undertaker.jpg" alt="Undertaker socks">
+                    </div>
+                    <p>Undertaker</p>
+                    <p class="price">$25</p>
+                </div>
             </div>
+            <div id="cart">
+                <div class="order-summary">
+                    <div class="order-header">
+                        <p>order summary</p>
+                    </div>
+                    <div class="collapse show" id="collapse-order-2">
+                        <div id="order-wrapper">
+                            <p class="empty-order">
+                                Nothing Here Yet
+                            </p>
+                        </div>
+                    </div>
+                    <div class="checkout">
+                        <div class="checkout-desc">
+                            <p class="total">Cart Subtotal</p>
+                            <p id="total-container" class="total-num">$0</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <div id="footer">
+            <p>&copy; 2021 Socks R Us</p>
         </div>
     </div>
-    <script src="js/gallery.js"></script>
+    <script src="js/cart.js"></script>
 </body>
 
 </html>
